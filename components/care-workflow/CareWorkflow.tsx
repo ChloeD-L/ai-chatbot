@@ -7,6 +7,19 @@ import { Label } from "@/components/ui/label";
 import { Task } from "./Task";
 import { Card } from "@/components/ui/card";
 
+interface Task {
+  id: string;
+  title: string;
+  description: string;
+  status: "pending" | "in-progress" | "completed";
+  priority: "low" | "medium" | "high";
+  category: "medication" | "hygiene" | "nutrition" | "mobility" | "social" | "other";
+  estimatedDuration: number;
+  requiredEquipment?: string[];
+  safetyNotes?: string;
+  complianceNotes?: string;
+}
+
 export default function CareWorkflow() {
   const { messages, input, handleInputChange, handleSubmit } = useChat({
     api: "/api/care-workflow",
@@ -92,7 +105,7 @@ export default function CareWorkflow() {
 
                       return (
                         <div key={toolCallId} className="grid gap-4">
-                          {taskArray.map((task: any) => (
+                          {taskArray.map((task: Task) => (
                             <Task
                               key={task.id}
                               id={task.id}
