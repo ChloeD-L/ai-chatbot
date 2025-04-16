@@ -11,7 +11,7 @@ This is a Next.js project powered by the [Vercel AI SDK](https://sdk.vercel.ai) 
 - **Built with Vercel AI SDK's Generative UI** — uses `useChat` and tool calling to dynamically generate structured UI from model responses
 - **OpenAI GPT-4o integration** for both general-purpose chat and task-specific logic
 - **Caregiver assistant** that transforms natural language into actionable workflows
-- 🔧 **Tool-based architecture** with structured task generation via Zod schema validation
+- **Tool-based architecture** with structured task generation via Zod schema validation
 - Clean, responsive design using **Tailwind CSS** and **shadcn/ui**
 - Built with **Next.js App Router** for modern routing and layout structure
 
